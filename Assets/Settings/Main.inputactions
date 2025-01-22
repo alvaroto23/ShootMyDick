@@ -1,1 +1,151 @@
-{}
+{
+    "name": "Main",
+    "maps": [
+        {
+            "name": "Character",
+            "id": "480dacd2-f93a-41c7-ae76-336aa8023299",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "a997a67d-682e-453a-a960-25cf52e7a6f7",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "47f0ce12-beb6-4cda-8118-a5af6081f717",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Camera",
+                    "type": "Value",
+                    "id": "1b8bb381-12ef-4c83-8a25-4caa4a68cfba",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "WASD",
+                    "id": "0c695df5-302e-474f-9c7d-115a43ccf840",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "7656ef7b-04b9-473c-a52b-067bab2dc254",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "740cce53-cdf0-47fe-8f2f-3d685636b685",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "8e5b088f-ee53-40c7-882b-8b70d996010b",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "8736a948-9695-446a-9d09-e82612b0334e",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c30a6495-9a07-4e5e-9d8b-3da3732bf100",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "35e19846-fd68-4d98-b285-d2653b7b8f19",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc6c45e3-5f3f-42d4-9848-3fb35cbd599f",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90b016c1-3476-4d86-8379-f0aab338c1e4",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "464304a4-7bab-464f-b046-46de71631bdc",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
