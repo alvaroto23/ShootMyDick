@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 89cfbc3d19b33a6469385c5028cfc8e6
+guid: 8f7137d4119dbb048952992f220fa2af
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -17,14 +17,18 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
+      copied configuration does not match position in animation file:\n\t'mixamorig:LeftUpLeg'
+      : position error = 24.066919 mm\n\t'mixamorig:LeftLeg' : position error = 6.254919
+      mm\n\t'mixamorig:LeftFoot' : position error = 15.630298 mm\n\t'mixamorig:LeftToeBase'
+      : position error = 25.422029 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -33,18 +37,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Die
+      name: Walk
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 78
+      lastFrame: 42
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
