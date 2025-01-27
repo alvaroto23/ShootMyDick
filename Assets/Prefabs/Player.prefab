@@ -103,10 +103,10 @@ GameObject:
   - component: {fileID: 821699558297728132}
   - component: {fileID: 2496567240041870063}
   - component: {fileID: 9109919707466040330}
+  - component: {fileID: 7493812453370073293}
   - component: {fileID: 8282366152564015100}
   - component: {fileID: 3452067703637254743}
   - component: {fileID: 889878182805478636}
-  - component: {fileID: 7493812453370073293}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -129,7 +129,7 @@ Transform:
   - {fileID: 7480899678216619791}
   - {fileID: 5427299282124145415}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2496567240041870063
 MeshFilter:
@@ -181,6 +181,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7493812453370073293
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8465100035649762245}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!136 &8282366152564015100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -246,34 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea9a8dbcf1dee84092c7d358005f9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
---- !u!54 &7493812453370073293
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8465100035649762245}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  moveSpeed: 6
 --- !u!1001 &5538049356822963436
 PrefabInstance:
   m_ObjectHideFlags: 0
