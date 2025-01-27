@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Camera",
+                    "name": "Aim",
                     "type": "Value",
                     "id": "1b8bb381-12ef-4c83-8a25-4caa4a68cfba",
                     "expectedControlType": "Vector2",
@@ -129,7 +129,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -140,7 +140,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAim : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Vector2 aimInput;
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnAim(InputValue value)
     {
-        
+        aimInput = value.Get<Vector2>();
     }
 }
