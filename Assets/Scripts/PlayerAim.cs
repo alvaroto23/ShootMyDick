@@ -9,6 +9,11 @@ public class PlayerAim : MonoBehaviour
     private float xAngle;
     private Vector2 aimInput;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
 
     void Update()
     {
