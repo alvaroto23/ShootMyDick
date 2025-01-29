@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
 
-
     private Vector2 moveInput;
     private Rigidbody rb;
 
@@ -18,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector3(moveInput.x * moveSpeed, rb.velocity.y, moveInput.y * moveSpeed);
+        Vector3 newVelocity = new Vector3(moveInput.x * moveSpeed, rb.velocity.y, moveInput.y * moveSpeed);
+        rb.velocity = transform.rotation * newVelocity;
     }
 
 

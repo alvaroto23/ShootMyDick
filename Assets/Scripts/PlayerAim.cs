@@ -5,10 +5,19 @@ using UnityEngine.InputSystem;
 
 public class PlayerAim : MonoBehaviour
 {
+    [SerializeField] private Vector2 aimSensitivity;
+    private float xAngle;
     private Vector2 aimInput;
+
+
     void Update()
     {
-        
+        //Rotacion en la horizontal (el player rota)
+        transform.Rotate(0, aimInput.x * aimSensitivity.x * Time.deltaTime, 0);
+
+        //Rotacion en la vetical (La camara rota)
+        xAngle = Mathf.Clamp(xAngle - aimInput.y * aimSensitivity.y * Time.deltaTime, -90, 90);
+        transform.GetChild(0).localEulerAngles = new Vector3 (xAngle, 0, 0);
     }
 
 
