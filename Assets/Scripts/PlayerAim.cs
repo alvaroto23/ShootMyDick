@@ -30,4 +30,18 @@ public class PlayerAim : MonoBehaviour
     {
         aimInput = value.Get<Vector2>();
     }
+
+    private void OnShoot(InputValue value)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.GetChild(0).position, transform.GetChild(0).forward, out hit))
+        {
+            if (hit.collider.CompareTag("Alien"))
+            {
+                Destroy(hit.collider.gameObject.transform.root.gameObject);
+            }
+
+        }
+    }
+
 }
