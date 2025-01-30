@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.HID;
 
 public class PlayerAim : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class PlayerAim : MonoBehaviour
     private float xAngle;
     private Vector2 aimInput;
 
-    private void Start()
+    [SerializeField] private EnemyMovement Enemy;
+
+
+    private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -38,10 +42,20 @@ public class PlayerAim : MonoBehaviour
         {
             if (hit.collider.CompareTag("Alien"))
             {
-                Destroy(hit.collider.gameObject.transform.root.gameObject);
+                StartCoroutine(alienDeath(hit));
             }
 
         }
     }
 
+
+    //Corrutina
+    private IEnumerator alienDeath(RaycastHit shooted)
+    {
+        Enemy.Die(true);
+        yield return new WaitForSeconds(3);
+
+        Destroy(shooted.collider.gameObject.transform.root.gameObject);
+        
+    }
 }
