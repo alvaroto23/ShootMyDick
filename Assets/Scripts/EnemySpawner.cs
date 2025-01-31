@@ -7,21 +7,26 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] public Transform player;
     [SerializeField] private GameObject Alien;
 
-    private int aliensSpawned;
+    private int maxAliens = 10;
+    private int aliensSpawned = 0;
 
-    private void Update()
+    // Inicia el spawneo
+    private void Start()
     {
-        if (aliensSpawned <= 10)
-        {
-            StartCoroutine(Spawner());
-        }
-        
+        Vector3 spawnPos = new Vector3(Random.Range(-30, 30), 1, Random.Range(-30, 30));
+        Instantiate(Alien, spawnPos, Quaternion.identity, transform);
+        StartCoroutine(Spawner()); 
     }
 
+    // Spawneo en pos aleatoria cada 5 seg
     private IEnumerator Spawner()
     {
-        yield return new WaitForSeconds(5);
-        Instantiate(Alien);
-        aliensSpawned++;
+        while (aliensSpawned < maxAliens)
+        {
+            yield return new WaitForSeconds(5);
+            Vector3 spawnPos = new Vector3(Random.Range(-30, 30), 1, Random.Range(-30, 30));
+            Instantiate(Alien, spawnPos, Quaternion.identity, transform);
+            aliensSpawned++;
+        }
     }
 }

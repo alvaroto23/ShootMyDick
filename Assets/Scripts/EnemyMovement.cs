@@ -18,10 +18,12 @@ public class EnemyMovement : MonoBehaviour
         target = GetComponentInParent<EnemySpawner>().player;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        dead = false;
     }
 
-    void Update()
+    private void Update()
     {
+        // Cambia el destino si ha muerto o no
         if (dead == false)
         {
             destination = target.position;

@@ -10,12 +10,10 @@ public class PlayerAim : MonoBehaviour
     private float xAngle;
     private Vector2 aimInput;
 
-
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-
 
     void Update()
     {
@@ -49,7 +47,6 @@ public class PlayerAim : MonoBehaviour
             }
         }
     }
-
 
     //Corrutina para morir el Alien
     private IEnumerator alienDeath(RaycastHit shooted)
