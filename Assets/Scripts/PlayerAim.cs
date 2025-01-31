@@ -10,8 +10,6 @@ public class PlayerAim : MonoBehaviour
     private float xAngle;
     private Vector2 aimInput;
 
-    [SerializeField] private EnemyMovement Enemy;
-
 
     private void Awake()
     {
@@ -29,12 +27,13 @@ public class PlayerAim : MonoBehaviour
         transform.GetChild(0).localEulerAngles = new Vector3 (xAngle, 0, 0);
     }
 
-
+    // Capturar donde apunta
     private void OnAim(InputValue value)
     {
         aimInput = value.Get<Vector2>();
     }
 
+    // Disparar
     private void OnShoot(InputValue value)
     {
         RaycastHit hit;
@@ -42,20 +41,22 @@ public class PlayerAim : MonoBehaviour
         {
             if (hit.collider.CompareTag("Alien"))
             {
-                StartCoroutine(alienDeath(hit));
+                hit.transform.gameObject.GetComponentInParent<EnemyMovement>().ReceiveHit();
+                if (hit.transform.gameObject.GetComponentInParent<EnemyMovement>().hits >= 2)
+                {
+                    StartCoroutine(alienDeath(hit));
+                }
             }
-
         }
     }
 
 
-    //Corrutina
+    //Corrutina para morir el Alien
     private IEnumerator alienDeath(RaycastHit shooted)
     {
-        Enemy.Die(true);
-        yield return new WaitForSeconds(3);
+        shooted.transform.gameObject.GetComponentInParent<EnemyMovement>().Die(true);
 
+        yield return new WaitForSeconds(3);
         Destroy(shooted.collider.gameObject.transform.root.gameObject);
-        
     }
 }
