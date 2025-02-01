@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
     {
         while (aliensSpawned < maxAliens)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
             Vector3 spawnPos = new Vector3(Random.Range(-30, 30), 1, Random.Range(-30, 30));
             Instantiate(Alien, spawnPos, Quaternion.identity, transform);
             aliensSpawned++;
