@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbab74b748ee684aa8e5850b2e024b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimSensitivity: {x: 55, y: 55}
+  aimSensitivity: {x: 25, y: 25}
 --- !u!1001 &5538049356822963436
 PrefabInstance:
   m_ObjectHideFlags: 0
