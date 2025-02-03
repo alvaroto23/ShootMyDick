@@ -8,9 +8,9 @@ public class EnemyMovement : MonoBehaviour
     private Transform target;
     private NavMeshAgent agent;
     private Animator animator;
+    private EnemySpawner spawner;
 
     public int hits = 0;
-    private bool dead;
     private Vector3 destination;
 
     private void Awake()
@@ -18,19 +18,22 @@ public class EnemyMovement : MonoBehaviour
         target = GetComponentInParent<EnemySpawner>().player;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        dead = false;
+        spawner = GetComponentInParent<EnemySpawner>();
     }
 
     private void Update()
     {
         // Cambia el destino si ha muerto o no
-        if (dead == false)
+        if (hits < 2)
         {
             destination = target.position;
         }
-        else if (dead)
+        else if (hits >= 2)
         {
             destination = transform.position;
+            agent.SetDestination(destination);
+            StartCoroutine(Die());
+
         }
 
         agent.SetDestination(destination);
@@ -42,9 +45,12 @@ public class EnemyMovement : MonoBehaviour
         print("Alien ha recibido " + hits + " disparos");
     }
 
-    public void Die(bool death)
+    private IEnumerator Die()
     {
-        dead = true;
-        animator.SetBool("Die", death);
+        animator.SetBool("Die", true);
+        spawner.aliensSpawned--;
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
     }
+
 }

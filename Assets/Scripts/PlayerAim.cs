@@ -40,20 +40,8 @@ public class PlayerAim : MonoBehaviour
             if (hit.collider.CompareTag("Alien"))
             {
                 hit.transform.gameObject.GetComponentInParent<EnemyMovement>().ReceiveHit();
-                if (hit.transform.gameObject.GetComponentInParent<EnemyMovement>().hits >= 2)
-                {
-                    StartCoroutine(alienDeath(hit));
-                }
             }
         }
     }
-
-    //Corrutina para morir el Alien
-    private IEnumerator alienDeath(RaycastHit shooted)
-    {
-        shooted.transform.gameObject.GetComponentInParent<EnemyMovement>().Die(true);
-
-        yield return new WaitForSeconds(3);
-        Destroy(shooted.collider.gameObject.transform.root.gameObject);
-    }
+   
 }
