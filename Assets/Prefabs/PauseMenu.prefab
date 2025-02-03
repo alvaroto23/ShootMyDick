@@ -495,7 +495,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a26541aca906e2428fa3eb73f3ad198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPauseObjects: []
+  menuPauseObjects:
+  - {fileID: 3070392462161148811}
+  - {fileID: 1483671078649215645}
+  - {fileID: 426625471999675458}
+  - {fileID: 7653266047911098530}
+  - {fileID: 6085441304721491089}
 --- !u!1 &5766301653890810136
 GameObject:
   m_ObjectHideFlags: 0
