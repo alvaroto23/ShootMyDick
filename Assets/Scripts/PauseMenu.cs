@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ReturnGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         pauseGame = !pauseGame;
         Time.timeScale = 1f;
         ButtonsEnableState();
@@ -47,8 +48,6 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
             ButtonsEnableState();
-            //mixer.SetFloat("LowpassFreq", 500);
-
         }
 
         else if (!pauseGame)
@@ -56,7 +55,6 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState= CursorLockMode.Locked;
             Time.timeScale = 1f;
             ButtonsEnableState();
-            //mixer.SetFloat("LowpassFreq", 22000);
         }
     }
 
